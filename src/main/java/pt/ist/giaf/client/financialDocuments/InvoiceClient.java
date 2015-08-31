@@ -132,7 +132,7 @@ public class InvoiceClient {
         r.setNumeroLinha(f.createCriarFatSimplSyncInDetalheNumeroLinha(getInt(o, "line")));
         r.setTipoLinha(f.createCriarFatSimplSyncInDetalheTipoLinha(get(o, "type")));
         r.setArtigo(f.createCriarFatSimplSyncInDetalheArtigo(get(o, "article")));
-        r.setArmazemID(f.createCriarFatSimplSyncInDetalheRubricaContabilidade(get(o, "rubrica")));
+        //r.setArmazemID(f.createCriarFatSimplSyncInDetalheRubricaContabilidade(get(o, "rubrica")));
         r.setDescricao(f.createCriarFatSimplSyncInDetalheDescricao(get(o, "description")));
         r.setUnidadeMedida(f.createCriarFatSimplSyncInDetalheUnidadeMedida(get(o, "unitType")));
         r.setQuantidade(f.createCriarFatSimplSyncInDetalheQuantidade(getBigDecimal(o, "quantity")));
