@@ -26,11 +26,16 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         &lt;element name="codigoUtilizador" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="condicaoPagamentoID" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="dataDocumento" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/>
+ *         &lt;element name="dataPagamento" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/>
+ *         &lt;element name="dataVencimento" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/>
  *         &lt;element name="detalhes" type="{http://external.entities.ist.services.mygiaf.indra.pt}ArrayOfCriarFatSimplSyncInDetalhe" minOccurs="0"/>
  *         &lt;element name="entidadeID" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="grupoTerceiro" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         &lt;element name="idDivida" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="meioPagamento" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="morada" type="{http://external.entities.ist.services.mygiaf.indra.pt}CriarFatSimplSyncInMorada" minOccurs="0"/>
  *         &lt;element name="nome" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="numeroDocumento" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="observacao" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="referencia" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="serie" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
@@ -53,11 +58,16 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "codigoUtilizador",
     "condicaoPagamentoID",
     "dataDocumento",
+    "dataPagamento",
+    "dataVencimento",
     "detalhes",
     "entidadeID",
     "grupoTerceiro",
+    "idDivida",
+    "meioPagamento",
     "morada",
     "nome",
+    "numeroDocumento",
     "observacao",
     "referencia",
     "serie",
@@ -79,16 +89,26 @@ public class CriarFatSimplSyncIn {
     protected JAXBElement<String> condicaoPagamentoID;
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar dataDocumento;
+    @XmlSchemaType(name = "dateTime")
+    protected XMLGregorianCalendar dataPagamento;
+    @XmlSchemaType(name = "dateTime")
+    protected XMLGregorianCalendar dataVencimento;
     @XmlElementRef(name = "detalhes", namespace = "http://external.entities.ist.services.mygiaf.indra.pt", type = JAXBElement.class, required = false)
     protected JAXBElement<ArrayOfCriarFatSimplSyncInDetalhe> detalhes;
     @XmlElementRef(name = "entidadeID", namespace = "http://external.entities.ist.services.mygiaf.indra.pt", type = JAXBElement.class, required = false)
     protected JAXBElement<String> entidadeID;
     @XmlElementRef(name = "grupoTerceiro", namespace = "http://external.entities.ist.services.mygiaf.indra.pt", type = JAXBElement.class, required = false)
     protected JAXBElement<Integer> grupoTerceiro;
+    @XmlElementRef(name = "idDivida", namespace = "http://external.entities.ist.services.mygiaf.indra.pt", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> idDivida;
+    @XmlElementRef(name = "meioPagamento", namespace = "http://external.entities.ist.services.mygiaf.indra.pt", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> meioPagamento;
     @XmlElementRef(name = "morada", namespace = "http://external.entities.ist.services.mygiaf.indra.pt", type = JAXBElement.class, required = false)
     protected JAXBElement<CriarFatSimplSyncInMorada> morada;
     @XmlElementRef(name = "nome", namespace = "http://external.entities.ist.services.mygiaf.indra.pt", type = JAXBElement.class, required = false)
     protected JAXBElement<String> nome;
+    @XmlElementRef(name = "numeroDocumento", namespace = "http://external.entities.ist.services.mygiaf.indra.pt", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> numeroDocumento;
     @XmlElementRef(name = "observacao", namespace = "http://external.entities.ist.services.mygiaf.indra.pt", type = JAXBElement.class, required = false)
     protected JAXBElement<String> observacao;
     @XmlElementRef(name = "referencia", namespace = "http://external.entities.ist.services.mygiaf.indra.pt", type = JAXBElement.class, required = false)
@@ -247,6 +267,54 @@ public class CriarFatSimplSyncIn {
     }
 
     /**
+     * Gets the value of the dataPagamento property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public XMLGregorianCalendar getDataPagamento() {
+        return dataPagamento;
+    }
+
+    /**
+     * Sets the value of the dataPagamento property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public void setDataPagamento(XMLGregorianCalendar value) {
+        this.dataPagamento = value;
+    }
+
+    /**
+     * Gets the value of the dataVencimento property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public XMLGregorianCalendar getDataVencimento() {
+        return dataVencimento;
+    }
+
+    /**
+     * Sets the value of the dataVencimento property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public void setDataVencimento(XMLGregorianCalendar value) {
+        this.dataVencimento = value;
+    }
+
+    /**
      * Gets the value of the detalhes property.
      * 
      * @return
@@ -319,6 +387,54 @@ public class CriarFatSimplSyncIn {
     }
 
     /**
+     * Gets the value of the idDivida property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public JAXBElement<String> getIdDivida() {
+        return idDivida;
+    }
+
+    /**
+     * Sets the value of the idDivida property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public void setIdDivida(JAXBElement<String> value) {
+        this.idDivida = value;
+    }
+
+    /**
+     * Gets the value of the meioPagamento property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public JAXBElement<String> getMeioPagamento() {
+        return meioPagamento;
+    }
+
+    /**
+     * Sets the value of the meioPagamento property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public void setMeioPagamento(JAXBElement<String> value) {
+        this.meioPagamento = value;
+    }
+
+    /**
      * Gets the value of the morada property.
      * 
      * @return
@@ -364,6 +480,30 @@ public class CriarFatSimplSyncIn {
      */
     public void setNome(JAXBElement<String> value) {
         this.nome = value;
+    }
+
+    /**
+     * Gets the value of the numeroDocumento property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public JAXBElement<String> getNumeroDocumento() {
+        return numeroDocumento;
+    }
+
+    /**
+     * Sets the value of the numeroDocumento property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public void setNumeroDocumento(JAXBElement<String> value) {
+        this.numeroDocumento = value;
     }
 
     /**

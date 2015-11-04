@@ -25,9 +25,33 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
+    private final static QName _CriarFatSimplSyncInDetalhes_QNAME = new QName("http://external.entities.ist.services.mygiaf.indra.pt", "detalhes");
+    private final static QName _CriarFatSimplSyncInReferencia_QNAME = new QName("http://external.entities.ist.services.mygiaf.indra.pt", "referencia");
+    private final static QName _CriarFatSimplSyncInMorada_QNAME = new QName("http://external.entities.ist.services.mygiaf.indra.pt", "morada");
+    private final static QName _CriarFatSimplSyncInSerie_QNAME = new QName("http://external.entities.ist.services.mygiaf.indra.pt", "serie");
+    private final static QName _CriarFatSimplSyncInMeioPagamento_QNAME = new QName("http://external.entities.ist.services.mygiaf.indra.pt", "meioPagamento");
+    private final static QName _CriarFatSimplSyncInID_QNAME = new QName("http://external.entities.ist.services.mygiaf.indra.pt", "ID");
+    private final static QName _CriarFatSimplSyncInNumeroDocumento_QNAME = new QName("http://external.entities.ist.services.mygiaf.indra.pt", "numeroDocumento");
+    private final static QName _CriarFatSimplSyncInVendedorID_QNAME = new QName("http://external.entities.ist.services.mygiaf.indra.pt", "vendedorID");
+    private final static QName _CriarFatSimplSyncInEntidadeID_QNAME = new QName("http://external.entities.ist.services.mygiaf.indra.pt", "entidadeID");
+    private final static QName _CriarFatSimplSyncInCodigoUtilizador_QNAME = new QName("http://external.entities.ist.services.mygiaf.indra.pt", "codigoUtilizador");
+    private final static QName _CriarFatSimplSyncInTipoDocumento_QNAME = new QName("http://external.entities.ist.services.mygiaf.indra.pt", "tipoDocumento");
+    private final static QName _CriarFatSimplSyncInCodigoDivisa_QNAME = new QName("http://external.entities.ist.services.mygiaf.indra.pt", "codigoDivisa");
+    private final static QName _CriarFatSimplSyncInCondicaoPagamentoID_QNAME = new QName("http://external.entities.ist.services.mygiaf.indra.pt", "condicaoPagamentoID");
+    private final static QName _CriarFatSimplSyncInNIF_QNAME = new QName("http://external.entities.ist.services.mygiaf.indra.pt", "NIF");
+    private final static QName _CriarFatSimplSyncInNome_QNAME = new QName("http://external.entities.ist.services.mygiaf.indra.pt", "nome");
+    private final static QName _CriarFatSimplSyncInGrupoTerceiro_QNAME = new QName("http://external.entities.ist.services.mygiaf.indra.pt", "grupoTerceiro");
+    private final static QName _CriarFatSimplSyncInUnidadeExploracao_QNAME = new QName("http://external.entities.ist.services.mygiaf.indra.pt", "unidadeExploracao");
+    private final static QName _CriarFatSimplSyncInIdDivida_QNAME = new QName("http://external.entities.ist.services.mygiaf.indra.pt", "idDivida");
+    private final static QName _CriarFatSimplSyncInObservacao_QNAME = new QName("http://external.entities.ist.services.mygiaf.indra.pt", "observacao");
     private final static QName _CriarFatSimplSyncOutMensagemErro_QNAME = new QName("http://external.entities.ist.services.mygiaf.indra.pt", "mensagemErro");
     private final static QName _CriarFatSimplSyncOutDocumentoGIAF_QNAME = new QName("http://external.entities.ist.services.mygiaf.indra.pt", "documentoGIAF");
     private final static QName _CriarFatSimplSyncOutPDFBase64_QNAME = new QName("http://external.entities.ist.services.mygiaf.indra.pt", "PDFBase64");
+    private final static QName _CriarFatSimplSyncInMoradaPais_QNAME = new QName("http://external.entities.ist.services.mygiaf.indra.pt", "pais");
+    private final static QName _CriarFatSimplSyncInMoradaRua_QNAME = new QName("http://external.entities.ist.services.mygiaf.indra.pt", "rua");
+    private final static QName _CriarFatSimplSyncInMoradaCodigoPostal_QNAME = new QName("http://external.entities.ist.services.mygiaf.indra.pt", "codigoPostal");
+    private final static QName _CriarFatSimplSyncInMoradaNumero_QNAME = new QName("http://external.entities.ist.services.mygiaf.indra.pt", "numero");
+    private final static QName _CriarFatSimplSyncInMoradaLocalidade_QNAME = new QName("http://external.entities.ist.services.mygiaf.indra.pt", "localidade");
     private final static QName _CriarFatSimplSyncInDetalheArtigoCIVA_QNAME = new QName("http://external.entities.ist.services.mygiaf.indra.pt", "artigoCIVA");
     private final static QName _CriarFatSimplSyncInDetalheQuantidade_QNAME = new QName("http://external.entities.ist.services.mygiaf.indra.pt", "quantidade");
     private final static QName _CriarFatSimplSyncInDetalheTaxaIVA_QNAME = new QName("http://external.entities.ist.services.mygiaf.indra.pt", "taxaIVA");
@@ -43,33 +67,28 @@ public class ObjectFactory {
     private final static QName _CriarFatSimplSyncInDetalheCentroCusto_QNAME = new QName("http://external.entities.ist.services.mygiaf.indra.pt", "centroCusto");
     private final static QName _CriarFatSimplSyncInDetalhePrecoUnitario_QNAME = new QName("http://external.entities.ist.services.mygiaf.indra.pt", "precoUnitario");
     private final static QName _CriarFatSimplSyncInDetalheCentroResponsabilidade_QNAME = new QName("http://external.entities.ist.services.mygiaf.indra.pt", "centroResponsabilidade");
-    private final static QName _CriarFatSimplSyncInDetalheObservacao_QNAME = new QName("http://external.entities.ist.services.mygiaf.indra.pt", "observacao");
-    private final static QName _CriarFatSimplSyncInMoradaPais_QNAME = new QName("http://external.entities.ist.services.mygiaf.indra.pt", "pais");
-    private final static QName _CriarFatSimplSyncInMoradaRua_QNAME = new QName("http://external.entities.ist.services.mygiaf.indra.pt", "rua");
-    private final static QName _CriarFatSimplSyncInMoradaCodigoPostal_QNAME = new QName("http://external.entities.ist.services.mygiaf.indra.pt", "codigoPostal");
-    private final static QName _CriarFatSimplSyncInMoradaNumero_QNAME = new QName("http://external.entities.ist.services.mygiaf.indra.pt", "numero");
-    private final static QName _CriarFatSimplSyncInMoradaLocalidade_QNAME = new QName("http://external.entities.ist.services.mygiaf.indra.pt", "localidade");
-    private final static QName _CriarFatSimplSyncInDetalhes_QNAME = new QName("http://external.entities.ist.services.mygiaf.indra.pt", "detalhes");
-    private final static QName _CriarFatSimplSyncInReferencia_QNAME = new QName("http://external.entities.ist.services.mygiaf.indra.pt", "referencia");
-    private final static QName _CriarFatSimplSyncInMorada_QNAME = new QName("http://external.entities.ist.services.mygiaf.indra.pt", "morada");
-    private final static QName _CriarFatSimplSyncInSerie_QNAME = new QName("http://external.entities.ist.services.mygiaf.indra.pt", "serie");
-    private final static QName _CriarFatSimplSyncInID_QNAME = new QName("http://external.entities.ist.services.mygiaf.indra.pt", "ID");
-    private final static QName _CriarFatSimplSyncInVendedorID_QNAME = new QName("http://external.entities.ist.services.mygiaf.indra.pt", "vendedorID");
-    private final static QName _CriarFatSimplSyncInEntidadeID_QNAME = new QName("http://external.entities.ist.services.mygiaf.indra.pt", "entidadeID");
-    private final static QName _CriarFatSimplSyncInCodigoUtilizador_QNAME = new QName("http://external.entities.ist.services.mygiaf.indra.pt", "codigoUtilizador");
-    private final static QName _CriarFatSimplSyncInTipoDocumento_QNAME = new QName("http://external.entities.ist.services.mygiaf.indra.pt", "tipoDocumento");
-    private final static QName _CriarFatSimplSyncInCodigoDivisa_QNAME = new QName("http://external.entities.ist.services.mygiaf.indra.pt", "codigoDivisa");
-    private final static QName _CriarFatSimplSyncInCondicaoPagamentoID_QNAME = new QName("http://external.entities.ist.services.mygiaf.indra.pt", "condicaoPagamentoID");
-    private final static QName _CriarFatSimplSyncInNIF_QNAME = new QName("http://external.entities.ist.services.mygiaf.indra.pt", "NIF");
-    private final static QName _CriarFatSimplSyncInNome_QNAME = new QName("http://external.entities.ist.services.mygiaf.indra.pt", "nome");
-    private final static QName _CriarFatSimplSyncInGrupoTerceiro_QNAME = new QName("http://external.entities.ist.services.mygiaf.indra.pt", "grupoTerceiro");
-    private final static QName _CriarFatSimplSyncInUnidadeExploracao_QNAME = new QName("http://external.entities.ist.services.mygiaf.indra.pt", "unidadeExploracao");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: pt.indra.mygiaf.services.ist.entities.external
      * 
      */
     public ObjectFactory() {
+    }
+
+    /**
+     * Create an instance of {@link CriarFatSimplSyncIn }
+     * 
+     */
+    public CriarFatSimplSyncIn createCriarFatSimplSyncIn() {
+        return new CriarFatSimplSyncIn();
+    }
+
+    /**
+     * Create an instance of {@link CriarFatSimplSyncOut }
+     * 
+     */
+    public CriarFatSimplSyncOut createCriarFatSimplSyncOut() {
+        return new CriarFatSimplSyncOut();
     }
 
     /**
@@ -97,19 +116,174 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link CriarFatSimplSyncOut }
+     * Create an instance of {@link JAXBElement }{@code <}{@link ArrayOfCriarFatSimplSyncInDetalhe }{@code >}}
      * 
      */
-    public CriarFatSimplSyncOut createCriarFatSimplSyncOut() {
-        return new CriarFatSimplSyncOut();
+    @XmlElementDecl(namespace = "http://external.entities.ist.services.mygiaf.indra.pt", name = "detalhes", scope = CriarFatSimplSyncIn.class)
+    public JAXBElement<ArrayOfCriarFatSimplSyncInDetalhe> createCriarFatSimplSyncInDetalhes(ArrayOfCriarFatSimplSyncInDetalhe value) {
+        return new JAXBElement<ArrayOfCriarFatSimplSyncInDetalhe>(_CriarFatSimplSyncInDetalhes_QNAME, ArrayOfCriarFatSimplSyncInDetalhe.class, CriarFatSimplSyncIn.class, value);
     }
 
     /**
-     * Create an instance of {@link CriarFatSimplSyncIn }
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    public CriarFatSimplSyncIn createCriarFatSimplSyncIn() {
-        return new CriarFatSimplSyncIn();
+    @XmlElementDecl(namespace = "http://external.entities.ist.services.mygiaf.indra.pt", name = "referencia", scope = CriarFatSimplSyncIn.class)
+    public JAXBElement<String> createCriarFatSimplSyncInReferencia(String value) {
+        return new JAXBElement<String>(_CriarFatSimplSyncInReferencia_QNAME, String.class, CriarFatSimplSyncIn.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link CriarFatSimplSyncInMorada }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://external.entities.ist.services.mygiaf.indra.pt", name = "morada", scope = CriarFatSimplSyncIn.class)
+    public JAXBElement<CriarFatSimplSyncInMorada> createCriarFatSimplSyncInMorada(CriarFatSimplSyncInMorada value) {
+        return new JAXBElement<CriarFatSimplSyncInMorada>(_CriarFatSimplSyncInMorada_QNAME, CriarFatSimplSyncInMorada.class, CriarFatSimplSyncIn.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://external.entities.ist.services.mygiaf.indra.pt", name = "serie", scope = CriarFatSimplSyncIn.class)
+    public JAXBElement<String> createCriarFatSimplSyncInSerie(String value) {
+        return new JAXBElement<String>(_CriarFatSimplSyncInSerie_QNAME, String.class, CriarFatSimplSyncIn.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://external.entities.ist.services.mygiaf.indra.pt", name = "meioPagamento", scope = CriarFatSimplSyncIn.class)
+    public JAXBElement<String> createCriarFatSimplSyncInMeioPagamento(String value) {
+        return new JAXBElement<String>(_CriarFatSimplSyncInMeioPagamento_QNAME, String.class, CriarFatSimplSyncIn.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://external.entities.ist.services.mygiaf.indra.pt", name = "ID", scope = CriarFatSimplSyncIn.class)
+    public JAXBElement<String> createCriarFatSimplSyncInID(String value) {
+        return new JAXBElement<String>(_CriarFatSimplSyncInID_QNAME, String.class, CriarFatSimplSyncIn.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://external.entities.ist.services.mygiaf.indra.pt", name = "numeroDocumento", scope = CriarFatSimplSyncIn.class)
+    public JAXBElement<String> createCriarFatSimplSyncInNumeroDocumento(String value) {
+        return new JAXBElement<String>(_CriarFatSimplSyncInNumeroDocumento_QNAME, String.class, CriarFatSimplSyncIn.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://external.entities.ist.services.mygiaf.indra.pt", name = "vendedorID", scope = CriarFatSimplSyncIn.class)
+    public JAXBElement<String> createCriarFatSimplSyncInVendedorID(String value) {
+        return new JAXBElement<String>(_CriarFatSimplSyncInVendedorID_QNAME, String.class, CriarFatSimplSyncIn.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://external.entities.ist.services.mygiaf.indra.pt", name = "entidadeID", scope = CriarFatSimplSyncIn.class)
+    public JAXBElement<String> createCriarFatSimplSyncInEntidadeID(String value) {
+        return new JAXBElement<String>(_CriarFatSimplSyncInEntidadeID_QNAME, String.class, CriarFatSimplSyncIn.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://external.entities.ist.services.mygiaf.indra.pt", name = "codigoUtilizador", scope = CriarFatSimplSyncIn.class)
+    public JAXBElement<String> createCriarFatSimplSyncInCodigoUtilizador(String value) {
+        return new JAXBElement<String>(_CriarFatSimplSyncInCodigoUtilizador_QNAME, String.class, CriarFatSimplSyncIn.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://external.entities.ist.services.mygiaf.indra.pt", name = "tipoDocumento", scope = CriarFatSimplSyncIn.class)
+    public JAXBElement<String> createCriarFatSimplSyncInTipoDocumento(String value) {
+        return new JAXBElement<String>(_CriarFatSimplSyncInTipoDocumento_QNAME, String.class, CriarFatSimplSyncIn.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://external.entities.ist.services.mygiaf.indra.pt", name = "codigoDivisa", scope = CriarFatSimplSyncIn.class)
+    public JAXBElement<String> createCriarFatSimplSyncInCodigoDivisa(String value) {
+        return new JAXBElement<String>(_CriarFatSimplSyncInCodigoDivisa_QNAME, String.class, CriarFatSimplSyncIn.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://external.entities.ist.services.mygiaf.indra.pt", name = "condicaoPagamentoID", scope = CriarFatSimplSyncIn.class)
+    public JAXBElement<String> createCriarFatSimplSyncInCondicaoPagamentoID(String value) {
+        return new JAXBElement<String>(_CriarFatSimplSyncInCondicaoPagamentoID_QNAME, String.class, CriarFatSimplSyncIn.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://external.entities.ist.services.mygiaf.indra.pt", name = "NIF", scope = CriarFatSimplSyncIn.class)
+    public JAXBElement<String> createCriarFatSimplSyncInNIF(String value) {
+        return new JAXBElement<String>(_CriarFatSimplSyncInNIF_QNAME, String.class, CriarFatSimplSyncIn.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://external.entities.ist.services.mygiaf.indra.pt", name = "nome", scope = CriarFatSimplSyncIn.class)
+    public JAXBElement<String> createCriarFatSimplSyncInNome(String value) {
+        return new JAXBElement<String>(_CriarFatSimplSyncInNome_QNAME, String.class, CriarFatSimplSyncIn.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Integer }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://external.entities.ist.services.mygiaf.indra.pt", name = "grupoTerceiro", scope = CriarFatSimplSyncIn.class)
+    public JAXBElement<Integer> createCriarFatSimplSyncInGrupoTerceiro(Integer value) {
+        return new JAXBElement<Integer>(_CriarFatSimplSyncInGrupoTerceiro_QNAME, Integer.class, CriarFatSimplSyncIn.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://external.entities.ist.services.mygiaf.indra.pt", name = "unidadeExploracao", scope = CriarFatSimplSyncIn.class)
+    public JAXBElement<String> createCriarFatSimplSyncInUnidadeExploracao(String value) {
+        return new JAXBElement<String>(_CriarFatSimplSyncInUnidadeExploracao_QNAME, String.class, CriarFatSimplSyncIn.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://external.entities.ist.services.mygiaf.indra.pt", name = "idDivida", scope = CriarFatSimplSyncIn.class)
+    public JAXBElement<String> createCriarFatSimplSyncInIdDivida(String value) {
+        return new JAXBElement<String>(_CriarFatSimplSyncInIdDivida_QNAME, String.class, CriarFatSimplSyncIn.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://external.entities.ist.services.mygiaf.indra.pt", name = "observacao", scope = CriarFatSimplSyncIn.class)
+    public JAXBElement<String> createCriarFatSimplSyncInObservacao(String value) {
+        return new JAXBElement<String>(_CriarFatSimplSyncInObservacao_QNAME, String.class, CriarFatSimplSyncIn.class, value);
     }
 
     /**
@@ -143,6 +317,51 @@ public class ObjectFactory {
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
+    @XmlElementDecl(namespace = "http://external.entities.ist.services.mygiaf.indra.pt", name = "pais", scope = CriarFatSimplSyncInMorada.class)
+    public JAXBElement<String> createCriarFatSimplSyncInMoradaPais(String value) {
+        return new JAXBElement<String>(_CriarFatSimplSyncInMoradaPais_QNAME, String.class, CriarFatSimplSyncInMorada.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://external.entities.ist.services.mygiaf.indra.pt", name = "rua", scope = CriarFatSimplSyncInMorada.class)
+    public JAXBElement<String> createCriarFatSimplSyncInMoradaRua(String value) {
+        return new JAXBElement<String>(_CriarFatSimplSyncInMoradaRua_QNAME, String.class, CriarFatSimplSyncInMorada.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://external.entities.ist.services.mygiaf.indra.pt", name = "codigoPostal", scope = CriarFatSimplSyncInMorada.class)
+    public JAXBElement<String> createCriarFatSimplSyncInMoradaCodigoPostal(String value) {
+        return new JAXBElement<String>(_CriarFatSimplSyncInMoradaCodigoPostal_QNAME, String.class, CriarFatSimplSyncInMorada.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Integer }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://external.entities.ist.services.mygiaf.indra.pt", name = "numero", scope = CriarFatSimplSyncInMorada.class)
+    public JAXBElement<Integer> createCriarFatSimplSyncInMoradaNumero(Integer value) {
+        return new JAXBElement<Integer>(_CriarFatSimplSyncInMoradaNumero_QNAME, Integer.class, CriarFatSimplSyncInMorada.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://external.entities.ist.services.mygiaf.indra.pt", name = "localidade", scope = CriarFatSimplSyncInMorada.class)
+    public JAXBElement<String> createCriarFatSimplSyncInMoradaLocalidade(String value) {
+        return new JAXBElement<String>(_CriarFatSimplSyncInMoradaLocalidade_QNAME, String.class, CriarFatSimplSyncInMorada.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
     @XmlElementDecl(namespace = "http://external.entities.ist.services.mygiaf.indra.pt", name = "artigoCIVA", scope = CriarFatSimplSyncInDetalhe.class)
     public JAXBElement<String> createCriarFatSimplSyncInDetalheArtigoCIVA(String value) {
         return new JAXBElement<String>(_CriarFatSimplSyncInDetalheArtigoCIVA_QNAME, String.class, CriarFatSimplSyncInDetalhe.class, value);
@@ -155,6 +374,15 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://external.entities.ist.services.mygiaf.indra.pt", name = "quantidade", scope = CriarFatSimplSyncInDetalhe.class)
     public JAXBElement<BigDecimal> createCriarFatSimplSyncInDetalheQuantidade(BigDecimal value) {
         return new JAXBElement<BigDecimal>(_CriarFatSimplSyncInDetalheQuantidade_QNAME, BigDecimal.class, CriarFatSimplSyncInDetalhe.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://external.entities.ist.services.mygiaf.indra.pt", name = "referencia", scope = CriarFatSimplSyncInDetalhe.class)
+    public JAXBElement<String> createCriarFatSimplSyncInDetalheReferencia(String value) {
+        return new JAXBElement<String>(_CriarFatSimplSyncInReferencia_QNAME, String.class, CriarFatSimplSyncInDetalhe.class, value);
     }
 
     /**
@@ -280,196 +508,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://external.entities.ist.services.mygiaf.indra.pt", name = "observacao", scope = CriarFatSimplSyncInDetalhe.class)
     public JAXBElement<String> createCriarFatSimplSyncInDetalheObservacao(String value) {
-        return new JAXBElement<String>(_CriarFatSimplSyncInDetalheObservacao_QNAME, String.class, CriarFatSimplSyncInDetalhe.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://external.entities.ist.services.mygiaf.indra.pt", name = "pais", scope = CriarFatSimplSyncInMorada.class)
-    public JAXBElement<String> createCriarFatSimplSyncInMoradaPais(String value) {
-        return new JAXBElement<String>(_CriarFatSimplSyncInMoradaPais_QNAME, String.class, CriarFatSimplSyncInMorada.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://external.entities.ist.services.mygiaf.indra.pt", name = "rua", scope = CriarFatSimplSyncInMorada.class)
-    public JAXBElement<String> createCriarFatSimplSyncInMoradaRua(String value) {
-        return new JAXBElement<String>(_CriarFatSimplSyncInMoradaRua_QNAME, String.class, CriarFatSimplSyncInMorada.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://external.entities.ist.services.mygiaf.indra.pt", name = "codigoPostal", scope = CriarFatSimplSyncInMorada.class)
-    public JAXBElement<String> createCriarFatSimplSyncInMoradaCodigoPostal(String value) {
-        return new JAXBElement<String>(_CriarFatSimplSyncInMoradaCodigoPostal_QNAME, String.class, CriarFatSimplSyncInMorada.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Integer }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://external.entities.ist.services.mygiaf.indra.pt", name = "numero", scope = CriarFatSimplSyncInMorada.class)
-    public JAXBElement<Integer> createCriarFatSimplSyncInMoradaNumero(Integer value) {
-        return new JAXBElement<Integer>(_CriarFatSimplSyncInMoradaNumero_QNAME, Integer.class, CriarFatSimplSyncInMorada.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://external.entities.ist.services.mygiaf.indra.pt", name = "localidade", scope = CriarFatSimplSyncInMorada.class)
-    public JAXBElement<String> createCriarFatSimplSyncInMoradaLocalidade(String value) {
-        return new JAXBElement<String>(_CriarFatSimplSyncInMoradaLocalidade_QNAME, String.class, CriarFatSimplSyncInMorada.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ArrayOfCriarFatSimplSyncInDetalhe }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://external.entities.ist.services.mygiaf.indra.pt", name = "detalhes", scope = CriarFatSimplSyncIn.class)
-    public JAXBElement<ArrayOfCriarFatSimplSyncInDetalhe> createCriarFatSimplSyncInDetalhes(ArrayOfCriarFatSimplSyncInDetalhe value) {
-        return new JAXBElement<ArrayOfCriarFatSimplSyncInDetalhe>(_CriarFatSimplSyncInDetalhes_QNAME, ArrayOfCriarFatSimplSyncInDetalhe.class, CriarFatSimplSyncIn.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://external.entities.ist.services.mygiaf.indra.pt", name = "referencia", scope = CriarFatSimplSyncIn.class)
-    public JAXBElement<String> createCriarFatSimplSyncInReferencia(String value) {
-        return new JAXBElement<String>(_CriarFatSimplSyncInReferencia_QNAME, String.class, CriarFatSimplSyncIn.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link CriarFatSimplSyncInMorada }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://external.entities.ist.services.mygiaf.indra.pt", name = "morada", scope = CriarFatSimplSyncIn.class)
-    public JAXBElement<CriarFatSimplSyncInMorada> createCriarFatSimplSyncInMorada(CriarFatSimplSyncInMorada value) {
-        return new JAXBElement<CriarFatSimplSyncInMorada>(_CriarFatSimplSyncInMorada_QNAME, CriarFatSimplSyncInMorada.class, CriarFatSimplSyncIn.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://external.entities.ist.services.mygiaf.indra.pt", name = "serie", scope = CriarFatSimplSyncIn.class)
-    public JAXBElement<String> createCriarFatSimplSyncInSerie(String value) {
-        return new JAXBElement<String>(_CriarFatSimplSyncInSerie_QNAME, String.class, CriarFatSimplSyncIn.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://external.entities.ist.services.mygiaf.indra.pt", name = "ID", scope = CriarFatSimplSyncIn.class)
-    public JAXBElement<String> createCriarFatSimplSyncInID(String value) {
-        return new JAXBElement<String>(_CriarFatSimplSyncInID_QNAME, String.class, CriarFatSimplSyncIn.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://external.entities.ist.services.mygiaf.indra.pt", name = "vendedorID", scope = CriarFatSimplSyncIn.class)
-    public JAXBElement<String> createCriarFatSimplSyncInVendedorID(String value) {
-        return new JAXBElement<String>(_CriarFatSimplSyncInVendedorID_QNAME, String.class, CriarFatSimplSyncIn.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://external.entities.ist.services.mygiaf.indra.pt", name = "entidadeID", scope = CriarFatSimplSyncIn.class)
-    public JAXBElement<String> createCriarFatSimplSyncInEntidadeID(String value) {
-        return new JAXBElement<String>(_CriarFatSimplSyncInEntidadeID_QNAME, String.class, CriarFatSimplSyncIn.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://external.entities.ist.services.mygiaf.indra.pt", name = "codigoUtilizador", scope = CriarFatSimplSyncIn.class)
-    public JAXBElement<String> createCriarFatSimplSyncInCodigoUtilizador(String value) {
-        return new JAXBElement<String>(_CriarFatSimplSyncInCodigoUtilizador_QNAME, String.class, CriarFatSimplSyncIn.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://external.entities.ist.services.mygiaf.indra.pt", name = "tipoDocumento", scope = CriarFatSimplSyncIn.class)
-    public JAXBElement<String> createCriarFatSimplSyncInTipoDocumento(String value) {
-        return new JAXBElement<String>(_CriarFatSimplSyncInTipoDocumento_QNAME, String.class, CriarFatSimplSyncIn.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://external.entities.ist.services.mygiaf.indra.pt", name = "codigoDivisa", scope = CriarFatSimplSyncIn.class)
-    public JAXBElement<String> createCriarFatSimplSyncInCodigoDivisa(String value) {
-        return new JAXBElement<String>(_CriarFatSimplSyncInCodigoDivisa_QNAME, String.class, CriarFatSimplSyncIn.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://external.entities.ist.services.mygiaf.indra.pt", name = "condicaoPagamentoID", scope = CriarFatSimplSyncIn.class)
-    public JAXBElement<String> createCriarFatSimplSyncInCondicaoPagamentoID(String value) {
-        return new JAXBElement<String>(_CriarFatSimplSyncInCondicaoPagamentoID_QNAME, String.class, CriarFatSimplSyncIn.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://external.entities.ist.services.mygiaf.indra.pt", name = "NIF", scope = CriarFatSimplSyncIn.class)
-    public JAXBElement<String> createCriarFatSimplSyncInNIF(String value) {
-        return new JAXBElement<String>(_CriarFatSimplSyncInNIF_QNAME, String.class, CriarFatSimplSyncIn.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://external.entities.ist.services.mygiaf.indra.pt", name = "nome", scope = CriarFatSimplSyncIn.class)
-    public JAXBElement<String> createCriarFatSimplSyncInNome(String value) {
-        return new JAXBElement<String>(_CriarFatSimplSyncInNome_QNAME, String.class, CriarFatSimplSyncIn.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Integer }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://external.entities.ist.services.mygiaf.indra.pt", name = "grupoTerceiro", scope = CriarFatSimplSyncIn.class)
-    public JAXBElement<Integer> createCriarFatSimplSyncInGrupoTerceiro(Integer value) {
-        return new JAXBElement<Integer>(_CriarFatSimplSyncInGrupoTerceiro_QNAME, Integer.class, CriarFatSimplSyncIn.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://external.entities.ist.services.mygiaf.indra.pt", name = "unidadeExploracao", scope = CriarFatSimplSyncIn.class)
-    public JAXBElement<String> createCriarFatSimplSyncInUnidadeExploracao(String value) {
-        return new JAXBElement<String>(_CriarFatSimplSyncInUnidadeExploracao_QNAME, String.class, CriarFatSimplSyncIn.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://external.entities.ist.services.mygiaf.indra.pt", name = "observacao", scope = CriarFatSimplSyncIn.class)
-    public JAXBElement<String> createCriarFatSimplSyncInObservacao(String value) {
-        return new JAXBElement<String>(_CriarFatSimplSyncInDetalheObservacao_QNAME, String.class, CriarFatSimplSyncIn.class, value);
+        return new JAXBElement<String>(_CriarFatSimplSyncInObservacao_QNAME, String.class, CriarFatSimplSyncInDetalhe.class, value);
     }
 
 }

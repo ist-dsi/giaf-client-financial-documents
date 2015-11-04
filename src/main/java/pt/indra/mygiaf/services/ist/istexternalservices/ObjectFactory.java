@@ -30,6 +30,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link CriarEntidadeResponse }
+     * 
+     */
+    public CriarEntidadeResponse createCriarEntidadeResponse() {
+        return new CriarEntidadeResponse();
+    }
+
+    /**
      * Create an instance of {@link CriarFatSimplSync }
      * 
      */
@@ -43,6 +51,14 @@ public class ObjectFactory {
      */
     public CriarFatSimplSyncResponse createCriarFatSimplSyncResponse() {
         return new CriarFatSimplSyncResponse();
+    }
+
+    /**
+     * Create an instance of {@link CriarEntidade }
+     * 
+     */
+    public CriarEntidade createCriarEntidade() {
+        return new CriarEntidade();
     }
 
 }

@@ -14,6 +14,10 @@ import javax.xml.datatype.DatatypeConfigurationException;
 import javax.xml.datatype.DatatypeFactory;
 import javax.xml.datatype.XMLGregorianCalendar;
 
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+
 import pt.indra.mygiaf.services.ist.entities.external.ArrayOfCriarFatSimplSyncInDetalhe;
 import pt.indra.mygiaf.services.ist.entities.external.CriarFatSimplSyncIn;
 import pt.indra.mygiaf.services.ist.entities.external.CriarFatSimplSyncInDetalhe;
@@ -22,9 +26,6 @@ import pt.indra.mygiaf.services.ist.entities.external.CriarFatSimplSyncOut;
 import pt.indra.mygiaf.services.ist.entities.external.ObjectFactory;
 import pt.indra.mygiaf.services.ist.istexternalservices.ISTExternalServices;
 import pt.indra.mygiaf.services.ist.istexternalservices.ISTExternalServicesPortType;
-
-import com.google.gson.JsonArray;
-import com.google.gson.JsonObject;
 
 public class InvoiceClient {
 
@@ -78,7 +79,7 @@ public class InvoiceClient {
         final CriarFatSimplSyncIn result = new CriarFatSimplSyncIn();
         result.setID(f.createCriarFatSimplSyncInID(get(o, "id")));
 
-        result.setDataDocumento(crateXMLDate(o));
+        result.setDataDocumento(crateXMLDate(get(o, "date")));
 
         result.setTipoDocumento(f.createCriarFatSimplSyncInTipoDocumento(get(o, "type")));
         result.setSerie(f.createCriarFatSimplSyncInSerie(get(o, "series")));
@@ -89,13 +90,25 @@ public class InvoiceClient {
 
         result.setMorada(f.createCriarFatSimplSyncInMorada(createSimpleInvoiceInputMorada(f, o)));
 
-        result.setCondicaoPagamentoID(f.createCriarFatSimplSyncInCondicaoPagamentoID(get(o, "paymentMethod")));
+        result.setCondicaoPagamentoID(f.createCriarFatSimplSyncInCondicaoPagamentoID(get(o, "paymentType")));
         result.setVendedorID(f.createCriarFatSimplSyncInVendedorID(get(o, "sellerId")));
         result.setCodigoDivisa(f.createCriarFatSimplSyncInCodigoDivisa(get(o, "currency")));
         result.setUnidadeExploracao(f.createCriarFatSimplSyncInUnidadeExploracao(get(o, "accountingUnit")));
         result.setReferencia(f.createCriarFatSimplSyncInReferencia(get(o, "reference")));
         result.setObservacao(f.createCriarFatSimplSyncInObservacao(get(o, "observation")));
         result.setCodigoUtilizador(f.createCriarFatSimplSyncInCodigoUtilizador(get(o, "username")));
+
+        result.setIdDivida(f.createCriarFatSimplSyncInIdDivida(get(o, "invoiceId")));
+        final String dataVencimento = get(o, "dueDate");
+        if (dataVencimento != null && !dataVencimento.isEmpty()) {
+            result.setDataVencimento(crateXMLDate(dataVencimento));
+        }
+        final String dataPagamento = get(o, "paymentDate");
+        if (dataPagamento != null && !dataPagamento.isEmpty()) {
+            result.setDataPagamento(crateXMLDate(dataPagamento));
+        }
+        result.setMeioPagamento(f.createCriarFatSimplSyncInMeioPagamento(get(o, "paymentMethod")));
+        result.setNumeroDocumento(f.createCriarFatSimplSyncInNumeroDocumento(get(o, "documentNumber")));
 
         final ArrayOfCriarFatSimplSyncInDetalhe array = new ArrayOfCriarFatSimplSyncInDetalhe();
         final JsonArray entries = getArray(o, "entries");
@@ -105,11 +118,10 @@ public class InvoiceClient {
         return result;
     }
 
-    @SuppressWarnings("restriction")
-    private static XMLGregorianCalendar crateXMLDate(final JsonObject o) {
+    private static XMLGregorianCalendar crateXMLDate(final String s) {
         try {
             final GregorianCalendar c = new GregorianCalendar();
-            c.setTime(toDate(get(o, "date")));
+            c.setTime(toDate(s));
             return DatatypeFactory.newInstance().newXMLGregorianCalendar(c);
         } catch (final DatatypeConfigurationException e) {
             throw new Error(e);
@@ -132,7 +144,7 @@ public class InvoiceClient {
         r.setNumeroLinha(f.createCriarFatSimplSyncInDetalheNumeroLinha(getInt(o, "line")));
         r.setTipoLinha(f.createCriarFatSimplSyncInDetalheTipoLinha(get(o, "type")));
         r.setArtigo(f.createCriarFatSimplSyncInDetalheArtigo(get(o, "article")));
-        //r.setArmazemID(f.createCriarFatSimplSyncInDetalheRubricaContabilidade(get(o, "rubrica")));
+        r.setArmazemID(f.createCriarFatSimplSyncInDetalheRubricaContabilidade(get(o, "rubrica")));
         r.setDescricao(f.createCriarFatSimplSyncInDetalheDescricao(get(o, "description")));
         r.setUnidadeMedida(f.createCriarFatSimplSyncInDetalheUnidadeMedida(get(o, "unitType")));
         r.setQuantidade(f.createCriarFatSimplSyncInDetalheQuantidade(getBigDecimal(o, "quantity")));
@@ -148,7 +160,8 @@ public class InvoiceClient {
     }
 
     private static String get(final JsonObject o, final String p) {
-        return o.get(p).getAsString();
+        final JsonElement v = o.get(p);
+        return v == null ? "" : v.getAsString();
     }
 
     private static Integer getInt(final JsonObject o, final String p) {

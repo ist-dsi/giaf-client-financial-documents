@@ -29,6 +29,7 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="observacao" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="precoUnitario" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
  *         &lt;element name="quantidade" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
+ *         &lt;element name="referencia" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="rubricaContabilidade" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="subcentro" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="taxaDesconto" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
@@ -55,6 +56,7 @@ import javax.xml.bind.annotation.XmlType;
     "observacao",
     "precoUnitario",
     "quantidade",
+    "referencia",
     "rubricaContabilidade",
     "subcentro",
     "taxaDesconto",
@@ -84,6 +86,8 @@ public class CriarFatSimplSyncInDetalhe {
     protected JAXBElement<BigDecimal> precoUnitario;
     @XmlElementRef(name = "quantidade", namespace = "http://external.entities.ist.services.mygiaf.indra.pt", type = JAXBElement.class, required = false)
     protected JAXBElement<BigDecimal> quantidade;
+    @XmlElementRef(name = "referencia", namespace = "http://external.entities.ist.services.mygiaf.indra.pt", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> referencia;
     @XmlElementRef(name = "rubricaContabilidade", namespace = "http://external.entities.ist.services.mygiaf.indra.pt", type = JAXBElement.class, required = false)
     protected JAXBElement<String> rubricaContabilidade;
     @XmlElementRef(name = "subcentro", namespace = "http://external.entities.ist.services.mygiaf.indra.pt", type = JAXBElement.class, required = false)
@@ -335,6 +339,30 @@ public class CriarFatSimplSyncInDetalhe {
      */
     public void setQuantidade(JAXBElement<BigDecimal> value) {
         this.quantidade = value;
+    }
+
+    /**
+     * Gets the value of the referencia property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public JAXBElement<String> getReferencia() {
+        return referencia;
+    }
+
+    /**
+     * Sets the value of the referencia property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public void setReferencia(JAXBElement<String> value) {
+        this.referencia = value;
     }
 
     /**

@@ -17,7 +17,7 @@ import javax.xml.ws.WebServiceFeature;
  * Generated source version: 2.2
  * 
  */
-@WebServiceClient(name = "ISTExternalServices", targetNamespace = "http://ist.services.mygiaf.indra.pt/ISTExternalServices", wsdlLocation = "http://mygiaftest.adm:8080/mygiaf/services/ISTExternalServices?wsdl")
+@WebServiceClient(name = "ISTExternalServices", targetNamespace = "http://ist.services.mygiaf.indra.pt/ISTExternalServices", wsdlLocation = "http://mygiaf.adm:8080/mygiaf/services/ISTExternalServices?wsdl")
 public class ISTExternalServices
     extends Service
 {
@@ -30,7 +30,7 @@ public class ISTExternalServices
         URL url = null;
         WebServiceException e = null;
         try {
-            url = new URL("http://mygiaftest.adm:8080/mygiaf/services/ISTExternalServices?wsdl");
+            url = new URL("http://mygiaf.adm:8080/mygiaf/services/ISTExternalServices?wsdl");
         } catch (MalformedURLException ex) {
             e = new WebServiceException(ex);
         }
