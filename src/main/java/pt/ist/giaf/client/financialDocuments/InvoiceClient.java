@@ -42,11 +42,7 @@ public class InvoiceClient {
         }
     }
 
-    public static String toString(final Date d) {
-        return new SimpleDateFormat(DATE_FORMAT).format(d);
-    }
-
-    public static Date toDate(final String s) {
+    private static Date toDate(final String s) {
         try {
             return new SimpleDateFormat(DATE_FORMAT).parse(s);
         } catch (final ParseException e) {
