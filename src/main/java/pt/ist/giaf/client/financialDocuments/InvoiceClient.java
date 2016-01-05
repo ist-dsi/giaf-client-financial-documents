@@ -152,6 +152,8 @@ public class InvoiceClient {
         r.setSubcentro(f.createCriarFatSimplSyncInDetalheSubcentro(get(o, "subCenter")));
         r.setArtigoCIVA(f.createCriarFatSimplSyncInDetalheArtigoCIVA(get(o, "legalArticle")));
         r.setObservacao(f.createCriarFatSimplSyncInDetalheObservacao(get(o, "observation")));
+        r.setReferencia(f.createCriarFatSimplSyncInDetalheReferencia(get(o, "reference")));
+
         array.getCriarFatSimplSyncInDetalhe().add(r);
     }
 
